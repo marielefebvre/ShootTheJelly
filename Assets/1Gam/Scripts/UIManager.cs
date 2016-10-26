@@ -12,8 +12,8 @@ public class UIManager : MonoBehaviour
     public InputField cheatcode;
 
     public GameObject inGameHud;
-    public AMenu pauseMenu;
-    public AMenu endMenu;
+    public PauseMenu pauseMenu;
+    public EndMenu endMenu;
 
     public Image shootIcon;
 	public Image darkMask;
@@ -71,19 +71,20 @@ public class UIManager : MonoBehaviour
             case GameManager.GameState.INGAME:
                 pauseMenu.gameObject.SetActive(true);
                 pauseMenu.SetTitle("Pause");
-                break;
+                return;
             case GameManager.GameState.VICTORY:
-                endMenu.gameObject.SetActive(true);
                 endMenu.SetTitle("Victory");
                 break;
             case GameManager.GameState.DEFEAT:
-                endMenu.gameObject.SetActive(true);
                 endMenu.SetTitle("Defeat");
                 break;
             default:
-                break;
+                return;
         }
-        //uiManager.timerText.text = (Time.time - startGameTime).ToString("0.0");
+        endMenu.gameObject.SetActive(true);
+        endMenu.timerText.text = GetFormattedTime();
+        endMenu.playerDeathCount.text = gameManager.playerPawn.deathCount.ToString();
+        endMenu.aiDeathCount.text = gameManager.aiPawn.deathCount.ToString();
     }
     public void OnResumeGame()
     {
@@ -93,5 +94,9 @@ public class UIManager : MonoBehaviour
         pauseMenu.gameObject.SetActive(false);
 
         Debug.Log("UI Resume");
+    }
+    public string GetFormattedTime()
+    {
+        return ((int)gameManager.gameDuration / 60).ToString("00") + ":" + ((int)gameManager.gameDuration % 60).ToString("00");
     }
 }

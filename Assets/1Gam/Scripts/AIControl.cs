@@ -19,12 +19,9 @@ public class AIControl : BaseControl {
         points = path.GetComponentsInChildren<Transform>();
         agent = GetComponent<NavMeshAgent>();
 
-        agent.updateRotation = false;
+        agent.updateRotation = true;
         agent.updatePosition = true;
 
-        // Disabling auto-braking allows for continuous movement
-        // between points (ie, the agent doesn't slow down as it
-        // approaches a destination point).
         agent.autoBraking = false;
 
         GotoNextPoint();
@@ -32,36 +29,19 @@ public class AIControl : BaseControl {
 
     void GotoNextPoint()
     {
-        // Returns if no points have been set up
         if (points.Length < 2)
             return;
 
-        // Set the agent to go to the currently selected destination.
         agent.destination = points[destPoint].position;
 
-        // Choose the next point in the array as the destination,
-        // cycling to the start if necessary.
         destPoint = (destPoint + 1) % points.Length;
-        if (destPoint == 0)
+        if (destPoint == 0)//First point is the path points parent object
             destPoint++;
     }
 
     void Update () {
-        //if (!gameManager.pause)
-        //    transform.LookAt(enemy);
-
-        // Choose the next destination point when the agent gets
-        // close to the current one.
         if (agent.remainingDistance < 0.5f)
             GotoNextPoint();
-
-        //if (points.Length > 0)
-        //    agent.SetDestination(points[0].position);
-
-        //if (agent.remainingDistance > agent.stoppingDistance)
-        //    character.Move(agent.desiredVelocity, false, false);
-        //else
-        //    character.Move(Vector3.zero, false, false);
     }
 
     public override bool shootRequested()

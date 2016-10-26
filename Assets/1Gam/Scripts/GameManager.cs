@@ -18,12 +18,13 @@ public class GameManager : MonoBehaviour {
     public GameObject player;
     public GameObject ai;
 
-    private Pawn playerPawn;
-    private Pawn aiPawn;
+    public Pawn playerPawn { get; private set; }
+    public Pawn aiPawn { get; private set; }
 
     public bool pause { get; private set; }
     public GameState gameState { get; private set; }
-    public float startGameTime { get; private set; }
+    private float startGameTime;
+    public float gameDuration { get; private set; }
 
     void Start()
     {
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour {
         SpawnPlayer(0);
         SetPause(false);
         startGameTime = Time.time;
+        gameDuration = 0;
 
         Debug.Log("Game Start");
 
@@ -55,8 +57,8 @@ public class GameManager : MonoBehaviour {
             SetPause(!pause);
         }
 
-        float elapsedTime = Time.time - startGameTime;
-        uiManager.timerText.text = string.Format("{0:00}:{1:00}", elapsedTime / 60, elapsedTime % 60);
+        gameDuration = Time.time - startGameTime;
+        uiManager.timerText.text = uiManager.GetFormattedTime();
     }
     public void SpawnPlayer(int choice)
     {
