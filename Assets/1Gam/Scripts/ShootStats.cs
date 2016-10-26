@@ -1,0 +1,27 @@
+﻿using UnityEngine;
+using System.Collections;
+
+[CreateAssetMenu (menuName = "Stats/ShootStats")]
+public class ShootStats : ScriptableObject
+{
+	//COMMON
+	public string sName = "Shoot";
+	public string pawnName = "White";
+	public Color pawnColor = Color.white;
+	public Sprite sprite;
+	public AudioClip sound;
+	public float baseCoolDown = 1f;
+	public int damage = 1;
+
+	//RAYCAST
+	public float speed = 3;
+	public float lifetime = 1;
+
+	//PROJECTILE
+	public float range = 50f;
+	public float force = 100f;
+
+	//	public abstract void Initialize (GameObject obj);
+
+	//	public abstract void TriggerAbility ();
+}
