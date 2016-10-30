@@ -40,7 +40,7 @@ public class ShootCooldown : MonoBehaviour
         pawnUI.ShootReady();
 	}
 
-	void Update ()
+	void FixedUpdate ()
 	{
         if (gameManager.pause)
             return;

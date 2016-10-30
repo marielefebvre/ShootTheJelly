@@ -13,7 +13,7 @@ public class Projectile : MonoBehaviour
     [HideInInspector]
     public ShootStats stats;
     [HideInInspector]
-    public Vector3 initialVelocity;
+    public Vector3 previousVelocity;
 
     private float death;
 
@@ -23,11 +23,10 @@ public class Projectile : MonoBehaviour
         death = Time.time + stats.lifetime;
 	}
 
-	void Update ()
+	void FixedUpdate ()
 	{
         if (gameManager.pause)
             return;
-        //gameObject.GetComponent<Rigidbody>().AddForce(initialVelocity);
         if (Time.time >= death) {
 			Destroy (gameObject);
 		}
@@ -35,8 +34,12 @@ public class Projectile : MonoBehaviour
 
     public void OnPauseGame()
     {
-        //uiManager.debugText.text = "OnpauseGame proj ";
+        previousVelocity = gameObject.GetComponent<Rigidbody>().velocity;
         gameObject.GetComponent<Rigidbody>().velocity = new Vector3();
+    }
+    public void OnResumeGame()
+    {
+        gameObject.GetComponent<Rigidbody>().velocity = previousVelocity;
     }
 
     void OnCollisionEnter(Collision collision)
@@ -52,12 +55,6 @@ public class Projectile : MonoBehaviour
                 pawn.Damage(stats.damage);
             }
         }
-        //		ContactPoint contact = collision.contacts[0];
-        //		Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
-        //		Vector3 pos = contact.point;
-        //		Instantiate(explosionPrefab, pos, rot);
-        //		Destroy(gameObject);
-
         Destroy (gameObject);
     }
 }

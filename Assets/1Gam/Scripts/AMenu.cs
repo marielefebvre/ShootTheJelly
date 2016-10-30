@@ -18,6 +18,6 @@ public abstract class AMenu : MonoBehaviour {
     }
     public void Quit()
     {
-        gameManager.ReturnMainMenu();
+        SceneManager.LoadScene("MainMenu");
     }
 }

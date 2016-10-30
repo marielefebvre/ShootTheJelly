@@ -19,7 +19,7 @@ public class AIControl : BaseControl {
         points = path.GetComponentsInChildren<Transform>();
         agent = GetComponent<NavMeshAgent>();
 
-        agent.updateRotation = true;
+        agent.updateRotation = false;
         agent.updatePosition = true;
 
         agent.autoBraking = false;
@@ -39,7 +39,8 @@ public class AIControl : BaseControl {
             destPoint++;
     }
 
-    void Update () {
+    void FixedUpdate() {
+        transform.LookAt(enemy);
         if (agent.remainingDistance < 0.5f)
             GotoNextPoint();
     }
