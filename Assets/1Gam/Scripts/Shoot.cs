@@ -30,7 +30,7 @@ public class Shoot : MonoBehaviour
         clone.stats = stats;
 
         Vector3 bullet_speed = fpsCam.transform.forward.normalized * stats.speed;
-        clone.GetComponent<Rigidbody>().velocity = bullet_speed + playerVelocity;
+        clone.GetComponent<Rigidbody>().velocity = bullet_speed;// + playerVelocity;
 
         clone.Initialize();
 	}
