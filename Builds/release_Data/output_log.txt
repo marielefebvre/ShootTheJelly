@@ -1,0 +1,63 @@
+Initialize engine version: 5.4.1f1 (649f48bbbf0f)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 970M (ID=0x13d8)
+    Vendor:   NVIDIA
+    VRAM:     3040 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Development\Unity Projects\1Gam_v2\Builds\release_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Development\Unity Projects\1Gam_v2\Builds\release_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Development\Unity Projects\1Gam_v2\Builds\release_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading D:\Development\Unity Projects\1Gam_v2\Builds\release_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: D:\Development\Unity Projects\1Gam_v2\Builds\release_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Development\Unity Projects\1Gam_v2\Builds\release_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Development\Unity Projects\1Gam_v2\Builds\release_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Development\Unity Projects\1Gam_v2\Builds\release_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Development\Unity Projects\1Gam_v2\Builds\release_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Development\Unity Projects\1Gam_v2\Builds\release_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\Development\Unity Projects\1Gam_v2\Builds\release_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading D:\Development\Unity Projects\1Gam_v2\Builds\release_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.082 seconds
+Platform assembly: D:\Development\Unity Projects\1Gam_v2\Builds\release_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Development\Unity Projects\1Gam_v2\Builds\release_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.774320 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.859652 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 599.
+Total: 0.323160 ms (FindLiveObjects: 0.032395 ms CreateObjectMapping: 0.031999 ms MarkObjects: 0.254024 ms  DeleteObjects: 0.003555 ms)
+
+UI Initlialize
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+UI Resume
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 373c -> priority: 1 
+  Thread -> id: 4e8 -> priority: 1 
+UI Pause 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.534123 ms
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 600.
+Total: 0.542024 ms (FindLiveObjects: 0.045827 ms CreateObjectMapping: 0.038320 ms MarkObjects: 0.308938 ms  DeleteObjects: 0.148148 ms)
+
+UI Initlialize
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+UI Resume
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
