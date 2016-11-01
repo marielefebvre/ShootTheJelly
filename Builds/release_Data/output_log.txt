@@ -18,19 +18,19 @@ Platform assembly: D:\Development\Unity Projects\1Gam_v2\Builds\release_Data\Man
 Loading D:\Development\Unity Projects\1Gam_v2\Builds\release_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: D:\Development\Unity Projects\1Gam_v2\Builds\release_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading D:\Development\Unity Projects\1Gam_v2\Builds\release_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.082 seconds
+- Completed reload, in  0.048 seconds
 Platform assembly: D:\Development\Unity Projects\1Gam_v2\Builds\release_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Development\Unity Projects\1Gam_v2\Builds\release_Data\Managed\System.dll (this message is harmless)
-desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
+desktop: 1920x1080 48Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.774320 ms
+UnloadTime: 0.688987 ms
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.859652 ms
+UnloadTime: 2.841282 ms
 
 Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 599.
-Total: 0.323160 ms (FindLiveObjects: 0.032395 ms CreateObjectMapping: 0.031999 ms MarkObjects: 0.254024 ms  DeleteObjects: 0.003555 ms)
+Total: 0.291555 ms (FindLiveObjects: 0.026864 ms CreateObjectMapping: 0.013432 ms MarkObjects: 0.247703 ms  DeleteObjects: 0.003160 ms)
 
 UI Initlialize
  
@@ -41,17 +41,25 @@ UI Resume
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 373c -> priority: 1 
-  Thread -> id: 4e8 -> priority: 1 
+  Thread -> id: 2a18 -> priority: 1 
+  Thread -> id: 2a40 -> priority: 1 
+UI Pause 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+UI Resume
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
 UI Pause 
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.534123 ms
+UnloadTime: 0.552296 ms
 
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 600.
-Total: 0.542024 ms (FindLiveObjects: 0.045827 ms CreateObjectMapping: 0.038320 ms MarkObjects: 0.308938 ms  DeleteObjects: 0.148148 ms)
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 600.
+Total: 0.522271 ms (FindLiveObjects: 0.082172 ms CreateObjectMapping: 0.036740 ms MarkObjects: 0.278913 ms  DeleteObjects: 0.123654 ms)
 
 UI Initlialize
  
@@ -60,4 +68,14 @@ UI Initlialize
 UI Resume
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+UI Pause 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.579160 ms
+
+Unloading 71 unused Assets to reduce memory usage. Loaded Objects now: 463.
+Total: 0.637234 ms (FindLiveObjects: 0.039111 ms CreateObjectMapping: 0.030419 ms MarkObjects: 0.296691 ms  DeleteObjects: 0.270617 ms)
 
