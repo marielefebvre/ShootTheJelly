@@ -15,13 +15,10 @@ public class Shoot : MonoBehaviour
 
 	public Transform shootPosition;
     public Camera fpsCam;
-    private WaitForSeconds duration = new WaitForSeconds (0.07f);
     private Vector3 rayOrigin;
 
     public void Trigger ()
 	{
-        Vector3 playerVelocity = gameObject.GetComponent<Rigidbody>().velocity;
-
         Quaternion rot = new Quaternion();
         rot.eulerAngles = fpsCam.transform.rotation.eulerAngles;
         Projectile clone = GameObject.Instantiate(projectile, shootPosition.position, rot) as Projectile;
@@ -29,8 +26,7 @@ public class Shoot : MonoBehaviour
         clone.uiManager = uiManager;
         clone.stats = stats;
 
-        Vector3 bullet_speed = fpsCam.transform.forward.normalized * stats.speed;
-        clone.GetComponent<Rigidbody>().velocity = bullet_speed;// + playerVelocity;
+        clone.GetComponent<Rigidbody>().velocity = fpsCam.transform.forward.normalized * stats.speed;
 
         clone.Initialize();
 	}

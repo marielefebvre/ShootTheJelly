@@ -53,7 +53,6 @@ public class UIManager : MonoBehaviour
     }
     public void Initlialize()
     {
-        Debug.Log("UI Initlialize");
         playerHud.deathCount = playerHudPanel.GetComponentInChildren<Text>();
         playerHud.life = playerHudPanel.GetComponentsInChildren<Image>();
         aiHud.deathCount = aiHudPanel.GetComponentInChildren<Text>();
@@ -64,7 +63,6 @@ public class UIManager : MonoBehaviour
 
     public void OnPauseGame()
     {
-        Debug.Log("UI Pause ");
         inGameHud.SetActive(false);
         switch (gameManager.gameState)
         {
@@ -83,8 +81,8 @@ public class UIManager : MonoBehaviour
         }
         endMenu.gameObject.SetActive(true);
         endMenu.timerText.text = GetFormattedTime();
-        endMenu.playerDeathCount.text = gameManager.playerPawn.deathCount.ToString();
-        endMenu.aiDeathCount.text = gameManager.aiPawn.deathCount.ToString();
+        endMenu.playerDeathCount.text = gameManager.playerPawn.stats.pawnName + " kills " + gameManager.aiPawn.deathCount.ToString();
+        endMenu.aiDeathCount.text = gameManager.aiPawn.stats.pawnName + " kills " + gameManager.playerPawn.deathCount.ToString();
     }
     public void OnResumeGame()
     {
@@ -92,8 +90,6 @@ public class UIManager : MonoBehaviour
             Debug.LogWarning("Resume ui while not ingame");
         inGameHud.SetActive(true);
         pauseMenu.gameObject.SetActive(false);
-
-        Debug.Log("UI Resume");
     }
     public string GetFormattedTime()
     {
